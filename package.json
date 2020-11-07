@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/BenProject/ElasticDal/issues"
   },
-  "homepage": "https://github.com/BenProject/ElasticDal#readme"
+  "homepage": "https://github.com/BenProject/ElasticDal#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.9.1",
+    "@types/elasticsearch": "^5.0.36",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
 }
