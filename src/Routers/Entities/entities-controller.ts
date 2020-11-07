@@ -20,9 +20,12 @@ export default {
       return res.send("bad arguments");
     }
     try {
-      res.send(
-        await dbWrapper.matchText(name.split("").join(" "), numberOfEntities)
+      const results = await dbWrapper.matchText(
+        name.split("").join(" "),
+        numberOfEntities
       );
+      results.map((result) => (result.name = result.name.split(" ").join("")));
+      res.send(results);
     } catch (err) {
       res.status(500);
       res.send("error while tried to get entities");
